@@ -44,7 +44,7 @@ namespace KDL {
      */
     class Joint {
     public:
-        typedef enum { RotAxis,RotX,RotY,RotZ,TransAxis,TransX,TransY,TransZ,None} JointType;
+        typedef enum { RotAxis,RotX,RotY,RotZ,TransAxis,TransX,TransY,TransZ,NONE} JointType;
         /**
          * Constructor of a joint.
          *
@@ -59,7 +59,7 @@ namespace KDL {
          * @param stiffness 1D stiffness along the joint axis,
          * default: 0
          */
-        explicit Joint(const std::string& name, const JointType& type=None,const double& scale=1,const double& offset=0,
+        explicit Joint(const std::string& name, const JointType& type=NONE,const double& scale=1,const double& offset=0,
               const double& inertia=0,const double& damping=0,const double& stiffness=0);
         /**
          * Constructor of a joint.
@@ -74,7 +74,7 @@ namespace KDL {
          * @param stiffness 1D stiffness along the joint axis,
          * default: 0
          */
-        explicit Joint(const JointType& type=None,const double& scale=1,const double& offset=0,
+        explicit Joint(const JointType& type=NONE,const double& scale=1,const double& offset=0,
                const double& inertia=0,const double& damping=0,const double& stiffness=0);
         /**
          * Constructor of a joint.
@@ -185,10 +185,10 @@ namespace KDL {
                 return "TransY";
             case TransZ:
                 return "TransZ";
-            case None:
-                return "None";
+            case NONE:
+                return "NONE";
             default:
-                return "None";
+                return "NONE";
             }
         };
 

@@ -24,8 +24,8 @@ void KinFamTest::JointTest()
 {
     double q;
     Joint j;
-    j=Joint("Joint 1", Joint::None);
-    CPPUNIT_ASSERT_EQUAL(Joint::None,j.getType());
+    j=Joint("Joint 1", Joint::NONE);
+    CPPUNIT_ASSERT_EQUAL(Joint::NONE,j.getType());
     random(q);
     CPPUNIT_ASSERT_EQUAL(j.pose(q),Frame::Identity());
     random(q);
@@ -75,7 +75,7 @@ void KinFamTest::SegmentTest()
     double q,qdot;
     Frame f,f1;
     random(f);
-    s = Segment("Segment 0", Joint("Joint 0", Joint::None),f);
+    s = Segment("Segment 0", Joint("Joint 0", Joint::NONE),f);
     random(q);
     random(qdot);
     f1=s.getJoint().pose(q)*f;
@@ -143,7 +143,7 @@ void KinFamTest::ChainTest()
                               Frame(Vector(0.0,0.0,0.4))));
     CPPUNIT_ASSERT_EQUAL(chain1.getNrOfJoints(),(uint)6);
     CPPUNIT_ASSERT_EQUAL(chain1.getNrOfSegments(),(uint)6);
-    chain1.addSegment(Segment("Segment 6", Joint("Joint 6", Joint::None),Frame(Vector(0.0,0.1,0.0))));
+    chain1.addSegment(Segment("Segment 6", Joint("Joint 6", Joint::NONE),Frame(Vector(0.0,0.1,0.0))));
     CPPUNIT_ASSERT_EQUAL(chain1.getNrOfJoints(),(uint)6);
     CPPUNIT_ASSERT_EQUAL(chain1.getNrOfSegments(),(uint)7);
 
@@ -158,7 +158,7 @@ void KinFamTest::ChainTest()
 void KinFamTest::TreeTest()
 {
     Tree tree1;
-    Segment segment1("Segment 1", Joint("Joint 1", Joint::None));
+    Segment segment1("Segment 1", Joint("Joint 1", Joint::NONE));
     Segment segment2("Segment 2", Joint("Joint 2", Joint::RotX),Frame(Vector(0.1,0.2,0.3)));
     Segment segment3("Segment 3", Joint("Joint 3", Joint::TransZ),Frame(Rotation::RotX(1.57)));
     Segment segment4("Segment 4", Joint("Joint 4", Joint::RotX),Frame(Vector(0.1,0.2,0.3)));

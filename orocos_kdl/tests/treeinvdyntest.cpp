@@ -25,11 +25,11 @@ void TreeInvDynTest::setUp()
                               Frame(Vector(0.0,0.0,0.0)), inertia));
     chain1.addSegment(Segment("Segment 12", Joint("Joint 12", Joint::RotX),
                               Frame(Vector(0.0,0.0,0.9)), inertia));
-    chain1.addSegment(Segment("Segment 13", Joint("Joint 13", Joint::None),
+    chain1.addSegment(Segment("Segment 13", Joint("Joint 13", Joint::NONE),
                               Frame(Vector(-0.4,0.0,0.0))));
     chain1.addSegment(Segment("Segment 14", Joint("Joint 14", Joint::RotX),
                               Frame(Vector(0.0,0.0,1.2)), inertia));
-    chain1.addSegment(Segment("Segment 15", Joint("Joint 15", Joint::None),
+    chain1.addSegment(Segment("Segment 15", Joint("Joint 15", Joint::NONE),
                               Frame(Vector(0.4,0.0,0.0)), inertia));
     chain1.addSegment(Segment("Segment 16", Joint("Joint 16", Joint::RotZ),
                               Frame(Vector(0.0,0.0,1.4)), inertia));
@@ -37,7 +37,7 @@ void TreeInvDynTest::setUp()
                               Frame(Vector(0.0,0.0,0.0)), inertia));
     chain1.addSegment(Segment("Segment 18", Joint("Joint 18", Joint::RotZ),
                               Frame(Vector(0.0,0.0,0.4)), inertia));
-    chain1.addSegment(Segment("Segment 19", Joint("Joint 19", Joint::None),
+    chain1.addSegment(Segment("Segment 19", Joint("Joint 19", Joint::NONE),
                               Frame(Vector(0.0,0.0,0.0)), inertia));
 
     //create chain #2

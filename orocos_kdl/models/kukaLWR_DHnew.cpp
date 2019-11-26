@@ -27,7 +27,7 @@ namespace KDL{
         Chain kukaLWR_DHnew;
 	
 	//joint 0
-	kukaLWR_DHnew.addSegment(Segment(Joint(Joint::None),
+	kukaLWR_DHnew.addSegment(Segment(Joint(Joint::NONE),
 				  Frame::DH_Craig1989(0.0, 0.0, 0.31, 0.0)
 				  ));
 	//joint 1

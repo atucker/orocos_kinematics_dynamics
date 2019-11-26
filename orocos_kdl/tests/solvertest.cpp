@@ -21,7 +21,7 @@ void SolverTest::setUp()
                               Frame(Vector(-0.4,0.0,0.0))));
     chain1.addSegment(Segment("Segment 4", Joint("Joint 4", Joint::RotX),
                               Frame(Vector(0.0,0.0,1.2))));
-    chain1.addSegment(Segment("Segment 5", Joint("Joint 5", Joint::None),
+    chain1.addSegment(Segment("Segment 5", Joint("Joint 5", Joint::NONE),
                               Frame(Vector(0.4,0.0,0.0))));
     chain1.addSegment(Segment("Segment 6", Joint("Joint 6", Joint::RotZ),
                               Frame(Vector(0.0,0.0,1.4))));
@@ -29,7 +29,7 @@ void SolverTest::setUp()
                               Frame(Vector(0.0,0.0,0.0))));
     chain1.addSegment(Segment("Segment 8", Joint("Joint 8", Joint::RotZ),
                               Frame(Vector(0.0,0.0,0.4))));
-    chain1.addSegment(Segment("Segment 9", Joint("Joint 9", Joint::None),
+    chain1.addSegment(Segment("Segment 9", Joint("Joint 9", Joint::NONE),
                               Frame(Vector(0.0,0.0,0.0))));
 
     chain2.addSegment(Segment("Segment 1", Joint("Joint 1", Joint::RotZ),
@@ -52,7 +52,7 @@ void SolverTest::setUp()
                               Frame(Vector(-0.4,0.0,0.0))));
     chain3.addSegment(Segment("Segment 4", Joint("Joint 4", Joint::RotX),
                               Frame(Vector(0.0,0.0,1.2))));
-    chain3.addSegment(Segment("Segment 5", Joint("Joint 5", Joint::None),
+    chain3.addSegment(Segment("Segment 5", Joint("Joint 5", Joint::NONE),
                               Frame(Vector(0.4,0.0,0.0))));
     chain3.addSegment(Segment("Segment 6", Joint("Joint 6", Joint::RotZ),
                               Frame(Vector(0.0,0.0,1.4))));
@@ -103,7 +103,7 @@ void SolverTest::setUp()
     chaindyn.addSegment(segment2);
 
 	// Motoman SIA10 Chain (for IK singular value tests)
-	motomansia10.addSegment(Segment(Joint(Joint::None),
+	motomansia10.addSegment(Segment(Joint(Joint::NONE),
 									Frame::DH_Craig1989(0.0, 0.0, 0.36, 0.0)));
 	motomansia10.addSegment(Segment(Joint(Joint::RotZ),
 									Frame::DH_Craig1989(0.0, M_PI_2, 0.0, 0.0)));
@@ -168,7 +168,7 @@ void SolverTest::setUp()
     motomansia10dyn.addSegment(Segment(Joint(Joint::RotZ, scale, offset, inertiamotorC, damping, stiffness),
                                Frame::DH(0.0, 0.0, 0.0, 0.0),
                                inert7));
-    motomansia10dyn.addSegment(Segment(Joint(Joint::None),
+    motomansia10dyn.addSegment(Segment(Joint(Joint::NONE),
                                        Frame(Rotation::Identity(),Vector(0.0,0.0,0.155))));
 }
 
